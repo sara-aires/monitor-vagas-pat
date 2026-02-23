@@ -12,7 +12,9 @@ def remover_acentos(texto):
     )
 
 def verificar():
-    response = requests.get(URL, timeout=30)
+    headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+}
     soup = BeautifulSoup(response.text, "html.parser")
 
     texto = remover_acentos(soup.get_text(separator=" ").lower())
