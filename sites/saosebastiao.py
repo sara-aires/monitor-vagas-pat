@@ -1,3 +1,5 @@
+import socket
+print(socket.gethostbyname("www.saosebastiao.sp.gov.br"))
 import requests
 from bs4 import BeautifulSoup
 import re
