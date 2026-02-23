@@ -15,6 +15,8 @@ def verificar():
     headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 }
+    response = requests.get(URL, headers=headers, timeout=30)
+
     soup = BeautifulSoup(response.text, "html.parser")
 
     texto = remover_acentos(soup.get_text(separator=" ").lower())
