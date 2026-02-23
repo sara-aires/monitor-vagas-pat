@@ -27,7 +27,7 @@ def enviar_telegram(mensagem):
 def main():
     print("🔎 Verificando vagas PAT Caraguatatuba...")
 
-    vagas_encontradas = caragua.verificar()
+    vagas_encontradas = caraguatatuba.verificar()
 
     if vagas_encontradas:
         mensagem = (
